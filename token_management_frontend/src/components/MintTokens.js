@@ -13,9 +13,9 @@ function MintTokens() {
         setLoading(true);
         try {
             const provider = getProvider('testnet');
-            const ledgerAddr = '';
+            const ledgerAddr = '0xc7ded74282daab0358f8ca8bed6398923a6f9d8a32e3febe09e0829d6998c24f';
             await executeMoveCall({
-                packageObjectId: '',
+                packageObjectId: '0x86692188988d40ff3068ded05548f3a7c12a0c574664693d4f8e46952573faf8',
                 module: 'simple_tken_management',
                 function: 'mint',
                 typeArguments: [],

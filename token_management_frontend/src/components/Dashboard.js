@@ -10,7 +10,7 @@ function Dashboard() {
     useEffect(() => {
         const fetchBalance = async () => {
             const provider = getProvider('testnet');
-            const ledgerAddr = '';
+            const ledgerAddr = '0xc7ded74282daab0358f8ca8bed6398923a6f9d8a32e3febe09e0829d6998c24f';
             const result = await provider.call('token_management_system::simple_token_management::balance_of', {
                 args: [ledgerAddr, userAddress],
             });
