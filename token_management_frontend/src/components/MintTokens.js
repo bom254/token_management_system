@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../App';
-import { SuiClient, getFullnodeUrl } from '@mysten/sui/client';
+import { SuiClient, getFullnodeUrl } from '@mysten/sui';
 import { TransactionBlock } from '@mysten/sui';
 
 function MintTokens() {

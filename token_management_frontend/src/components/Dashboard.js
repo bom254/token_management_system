@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../App';
-import { SuiClient, getFullnodeUrl } from '@mysten/sui/client';
+import { SuiClient, getFullnodeUrl } from '@mysten/sui';
 import TransactionHistory from './TransactionHistory';
 
 function Dashboard() {
