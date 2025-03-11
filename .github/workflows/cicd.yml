@@ -1,0 +1,32 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # Test the Move Contract
+  test-move:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Sui CLI
+        run: |
+          curl -L https://github.com/MystenLabs/sui/releases/latest/download/sui-Ubuntu-x86_64.deb -o sui.deb
+          sudo dpkg -i sui.deb
+        - name: Test Move Contract
+          run: cd source && sui move test
+
+  # Test and Deploy Frontend
+  test-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Dependencies
+        run: cd token_management_frontend && npm install
+      - name: Run Tests
+        run: cd token_management_frontend && npm test -- --watchAll=false
+      
