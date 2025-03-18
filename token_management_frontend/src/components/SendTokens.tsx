@@ -19,7 +19,7 @@ function SendTokens() {
             const txb = new TransactionBlock();
             txb.moveCall({
                 target: '0x8cb034311bedd1a5921d29e4a6f060f4fdfa41b8639f188e9738afc17b9840a3::simple_token_management::transfer',
-                arguments: [txb.object('0x8cb034311bedd1a5921d29e4a6f060f4fdfa41b8639f188e9738afc17b9840a3'), txb.pure(amount), txb.pure(toAddress)],
+                arguments: [txb.object('0x73d99b2ba20ab706dead4d3c2138fb0390b7d991825524b5fdab4ce0ad24a8ec'), txb.pure(amount), txb.pure(toAddress)],
             });
 
             // Sign and execute which requires wallet intergration
