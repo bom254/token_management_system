@@ -1,0 +1,2 @@
+export const LEDGERADDR = '0x73d99b2ba20ab706dead4d3c2138fb0390b7d991825524b5fdab4ce0ad24a8ec';
+export const PACKAGEID = '0x8cb034311bedd1a5921d29e4a6f060f4fdfa41b8639f188e9738afc17b9840a3';
